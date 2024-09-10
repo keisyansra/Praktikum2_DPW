@@ -1,5 +1,4 @@
 .link{
-    color: blueviolet;
     font-size: 20pt;
 }
 
@@ -7,6 +6,6 @@
     color: red;
 }
 
-/*.link:link{
-    color: yellowgreen;
+.link:link{
+    color: greenyellow;
 } /*punyakeisya
