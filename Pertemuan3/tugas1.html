@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+</head>
+<body>
+    <h2>Formulir Pendaftaran</h2>
+
+    <form action="#" method="POST">
+        <!-- Input Nama -->
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <!-- Input Alamat -->
+        <label for="alamat">Alamat:</label><br>
+        <textarea id="alamat" name="alamat" rows="3" required></textarea><br><br>
+
+        <!-- Input Tanggal Lahir -->
+        <label for="tanggal_lahir">Tanggal Lahir:</label><br>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required><br><br>
+
+        <!-- Pilihan Jenis Kelamin -->
+        <label for="jenis_kelamin">Jenis Kelamin:</label><br>
+        <input type="radio" id="pria" name="jenis_kelamin" value="Pria" required>
+        <label for="pria">Pria</label><br>
+        <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita" required>
+        <label for="wanita">Wanita</label><br><br>
+
+        <!-- Pilihan Pekerjaan -->
+        <label for="pekerjaan">Pekerjaan:</label><br>
+        <select id="pekerjaan" name="pekerjaan" required>
+            
+            <option value="pelajar">Pelajar</option>
+            <option value="mahasiswa">Mahasiswa</option>
+            <option value="karyawan">Karyawan</option>
+            <option value="wirausaha">Wirausaha</option>
+        </select><br><br>
+
+        <!-- Pilihan Hobby -->
+        <label for="hobby">Hobby:</label><br>
+        <select id="hobby" name="hobby" multiple required>
+            <option value="membaca">Membaca</option>
+            <option value="menulis">Menulis</option>
+            <option value="berkebun">Berkebun</option>
+            <option value="memasak">Memasak</option>
+        </select><br><br>
+
+        <!-- Kotak Centang -->
+        <label for="setuju">Syarat & Ketentuan:</label><br>
+        <input type="checkbox" id="setuju" name="setuju" required>
+        <label for="setuju">Saya setuju dengan syarat dan ketentuan</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
