@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulir Pendaftaran</title>
+    <script>
+        function validateForm() {
+            // Ambil elemen form
+            var nama = document.getElementById("nama").value;
+            var setuju = document.getElementById("setuju").checked;
+
+            // Validasi jika nama hanya 1 kata
+            if (nama.trim().split(" ").length < 2) {
+                alert("Nama harus minimal 2 kata.");
+                return false;
+            }
+
+            // Validasi checkbox syarat & ketentuan
+            if (!setuju) {
+                alert("Anda harus setuju dengan syarat dan ketentuan.");
+                return false;
+            }
+            alert("Data telah diterima");
+            return true; // Form valid, bisa dikirim
+        }
+    </script>
 </head>
 <body>
     <h2>Formulir Pendaftaran</h2>
 
-    <form action="#" method="POST">
+    <form action="#" method="POST" onsubmit="return validateForm()">
         <!-- Input Nama -->
         <label for="nama">Nama:</label><br>
         <input type="text" id="nama" name="nama" required><br><br>
@@ -31,7 +52,6 @@
         <!-- Pilihan Pekerjaan -->
         <label for="pekerjaan">Pekerjaan:</label><br>
         <select id="pekerjaan" name="pekerjaan" required>
-            
             <option value="pelajar">Pelajar</option>
             <option value="mahasiswa">Mahasiswa</option>
             <option value="karyawan">Karyawan</option>
