@@ -9,9 +9,9 @@ $hasilBagi = $a / $b;
 $sisaBagi = $a % $b;
 $pangkat = $a ** $b;
 
-echo "Hasil Penjumlahan : $hasilTambah";
-echo "Hasil Kurang : $hasilKurang";
-echo "Hasil Kali : $hasilKali";
-echo "Hasil Bagi : $hasilBagi";
-echo "Hasil Sisa Bagi : $sisaBagi";
-echo "Hasil Pangkat : $pangkat";
+echo "Hasil Penjumlahan : $hasilTambah <br>";
+echo "Hasil Kurang : $hasilKurang <br>";
+echo "Hasil Kali : $hasilKali <br>";
+echo "Hasil Bagi : $hasilBagi <br>";
+echo "Hasil Sisa Bagi : $sisaBagi <br>";
+echo "Hasil Pangkat : $pangkat <br>";
