@@ -13,5 +13,4 @@ $saya ="Elok";
 $ucapanSalam = "Selamat pagi";
 
 perkenalan($saya,$ucapanSalam);
-
 ?>

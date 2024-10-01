@@ -1,6 +1,6 @@
 <?php
 function tampilkanHaloDunia(){
-    echo "Halo dunia! <br>"
+    echo "Halo dunia! <br>";
 
     tampilkanHaloDunia();
 }
