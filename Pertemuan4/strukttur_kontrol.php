@@ -37,11 +37,22 @@ for ($i = 1; $i <= $jumlahLahan; $i++) {
 }
 echo "Jumlah buah yang akan dipanen adalah : $jumlahBuah <br><br>";
 
+echo "<b>FOREACH</b><br>";
 $skorUjian = [85, 92, 78, 96, 88];
 $totalSkor = 0;
 
 foreach ($skorUjian as $skor){
     $totalSkor += $skor;
 }
-echo "Total Skor ujian adalah : $totalSkor";
+echo "Total Skor ujian adalah : $totalSkor<br>";
+
+$nialaiSiswa = [85,92,58,64,9.,55,88,79,70,96];
+
+foreach ($nialaiSiswa as $nilai){
+    if($nilai < 60){
+        echo "Nilai  : $nilai (Tidak lulus)<br>";
+        continue;
+    }
+    echo "Nilai : $nilai (Lulus) <br>";
+}
 ?>
