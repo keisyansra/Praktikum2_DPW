@@ -1,78 +1,67 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulir Pendaftaran</title>
-    <script>
-        function validateForm() {
-            // Ambil elemen form
-            var nama = document.getElementById("nama").value;
-            var setuju = document.getElementById("setuju").checked;
-
-            // Validasi jika nama hanya 1 kata
-            if (nama.trim().split(" ").length < 2) {
-                alert("Nama harus minimal 2 kata.");
-                return false;
-            }
-
-            // Validasi checkbox syarat & ketentuan
-            if (!setuju) {
-                alert("Anda harus setuju dengan syarat dan ketentuan.");
-                return false;
-            }
-            alert("Data telah diterima");
-            return true; // Form valid, bisa dikirim
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="webformulir.css">
 </head>
 <body>
-    <h2>Formulir Pendaftaran</h2>
+    <div class="fotoAtas">
+        <img src="img/field1.jpg" alt="Gambar Formulir">
+    </div>
+    <hr>
+    <h2><b>Formulir Data Diri</b></h2>
 
-    <form action="#" method="POST" onsubmit="return validateForm()">
-        <!-- Input Nama -->
-        <label for="nama">Nama:</label><br>
-        <input type="text" id="nama" name="nama" required><br><br>
-
-        <!-- Input Alamat -->
-        <label for="alamat">Alamat:</label><br>
-        <textarea id="alamat" name="alamat" rows="3" required></textarea><br><br>
-
-        <!-- Input Tanggal Lahir -->
-        <label for="tanggal_lahir">Tanggal Lahir:</label><br>
-        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required><br><br>
-
-        <!-- Pilihan Jenis Kelamin -->
-        <label for="jenis_kelamin">Jenis Kelamin:</label><br>
-        <input type="radio" id="pria" name="jenis_kelamin" value="Pria" required>
-        <label for="pria">Pria</label><br>
-        <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita" required>
-        <label for="wanita">Wanita</label><br><br>
-
-        <!-- Pilihan Pekerjaan -->
-        <label for="pekerjaan">Pekerjaan:</label><br>
+    <div class="form-group">
+        <div class="nama">
+            <label for="nama">Nama :</label>
+            <br>
+            <textarea class="textareanama" id="nama" rows="2"></textarea>
+        </div>
+        <br><br>
+        <div class="alamat">
+            <label for="alamat">Alamat : </label>
+            <br>
+            <textarea class="textareaalamat" id="alamat" rows="5"></textarea>
+        </div>
+        <br><br>
+        <div class="tanggallahir">
+            <label for="tanggallahir">Tanggal Lahir :</label>
+            <br>
+            <input type="date" id="tanggallahir" name="tanggallahir" required>
+        </div>
+        <br><br>
+        <div class="jeniskelamin">
+            <label for="jeniskelamin">Jenis Kelamin : </label>
+            <br>
+            <input type="checkbox" name="jeniskelamin" value="Laki-laki"> Laki - laki
+            <input type="checkbox" name="jeniskelamin" value="perempuan"> Perempuan
+        </div>
+        <br><br>
+        <div class="hobi">
+            <label for="hobi">Hobi :</label>
+            <br>
+            <input type="checkbox" name="hobi" value="berenang"> Berenang
+            <input type="checkbox" name="hobi" value="berlari"> Berlari
+            <input type="checkbox" name="hobi" value="lainlain"> Lain-lain
+        </div>
+        <br><br>
+        <div class="pekerjaan">
+            <label for="pekerjaan">Pekerjaan:</label>
+            <br>
         <select id="pekerjaan" name="pekerjaan" required>
-            <option value="pelajar">Pelajar</option>
-            <option value="mahasiswa">Mahasiswa</option>
-            <option value="karyawan">Karyawan</option>
-            <option value="wirausaha">Wirausaha</option>
-        </select><br><br>
-
-        <!-- Pilihan Hobby -->
-        <label for="hobby">Hobby:</label><br>
-        <select id="hobby" name="hobby" multiple required>
-            <option value="membaca">Membaca</option>
-            <option value="menulis">Menulis</option>
-            <option value="berkebun">Berkebun</option>
-            <option value="memasak">Memasak</option>
-        </select><br><br>
-
-        <!-- Kotak Centang -->
-        <label for="setuju">Syarat & Ketentuan:</label><br>
-        <input type="checkbox" id="setuju" name="setuju" required>
-        <label for="setuju">Saya setuju dengan syarat dan ketentuan</label><br><br>
-
-        <input type="submit" value="Submit">
-    </form>
+            <option value="swasta">Swasta</option>
+            <option value="pns">PNS</option>
+            <option value="lainlain">Lain - lain</option>
+            </select>
+        </div>
+        <br><br>
+        <div class="konfirmasi">
+            <label for="konfirmasi"><input type="checkbox" value="konfirm">Konfirmasi data sudah benar</label>
+        </div>
+        <br>
+        <button type="submit" onclick="return validasiform()">Kirim!</button>
+    </div>
+    <script src="webformulir.js"></script>
 </body>
 </html>
+
